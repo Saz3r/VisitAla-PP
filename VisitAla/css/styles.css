@@ -1,0 +1,533 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Poppins, sans-serif;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+
+}
+
+:root {
+    --bg-color: #ffffff;
+    --text-color: #030305;
+    --second-color: #415363;
+    --main-color: rgb(4, 99, 122);
+    --big-font: 6rem;
+    --h2-font: 3rem;
+    --p-font: 1.1rem;
+
+
+}
+
+.hidden {
+    display: none;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    padding: 30px 18%;
+    transition: ease 0.4s;
+}
+
+.logo {
+
+    font-size: 35px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: var(--bg-color);
+    margin-right: auto;
+}
+
+.navbar {
+    display: flex;
+}
+
+.navbar a {
+    color: var(--bg-color);
+    font-size: var(--p-font);
+    font-weight: 500;
+    padding: 10px 22px;
+    border-radius: 4;
+    transition: ease 0.4s;
+
+}
+
+.navbar a:hover {
+    background: var(--bg-color);
+    color: var(--text-color);
+    box-shadow: 5px 10px 30px rgb(85 85 85 / 20%);
+    border-radius: 4px;
+
+}
+
+#menu-icon {
+    display: none;
+    color: var(--bg-color);
+    font-size: 35px;
+    z-index: 10001;
+    cursor: pointer;
+
+}
+
+section {
+    padding: 80px 18%;
+    color: var(--text-color)
+}
+
+.home {
+    position: relative;
+    background: url(../imagesala/kazakhstan-7224338_1280.jpg);
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+
+}
+
+.home-text h1 {
+    font-size: var(--big-font);
+    line-height: 1.2;
+    color: var(--bg-color);
+    font-family: "Paytone One", sans-serif;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+}
+
+.home-text p {
+    color: #ffffffbf;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 38px;
+
+    margin-bottom: 50px;
+}
+
+.home-btn {
+    display: inline-block;
+    font-size: 16px;
+    padding: 15px 30px;
+    background: #ffffffbf;
+    color: var(--main-color);
+    border-radius: 4px;
+    transition: ease 0.4s;
+
+}
+
+.home-btn:hover {
+    background: var(--bg-color);
+    box-shadow: 5px 10px 30px rgb(85 85 85 / 20%);
+    border-radius: 4px;
+    transform: scale(1.1);
+}
+
+.white {
+    background-color: var(--bg-color);
+    padding: 10px 18%;
+    box-shadow: rgba(35, 35, 38, 0.1) 0px 10px 10px -10px;
+
+}
+
+.white .logo {
+    color: var(--text-color);
+}
+
+.white .navbar a {
+    color: var(--text-color);
+}
+
+.text h2 {
+    font-size: var(--h2-font);
+    line-height: 1.1;
+}
+
+.row-items {
+    display: grid;
+    grid-template-columns: repeat(4, 250px);
+    grid-gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5rem;
+    text-align: center;
+}
+
+.container-box {
+    border-color: var(--bg-color);
+    border: 1px solid #f0eded;
+    padding: 50px 10px;
+    border-radius: 4px;
+    transition: all 1s ease 0s;
+    cursor: pointer;
+}
+
+.container-img img {
+    height: 85px;
+    width: 85px;
+    padding: 15px;
+    background: var(--bg-color);
+    box-shadow: 5px 10px 30px rgb(85 85 85 / 20%);
+    border-radius: 4px;
+    margin-bottom: 15px;
+    cursor: pointer;
+
+}
+
+.container-box h4 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.container-box p {
+    font-size: 15px;
+    color: var(--second-color);
+
+}
+
+.container-box:hover {
+    box-shadow: 5px 30px 55.1276px rgb(55 55 55 / 12%);
+    border: 1px solid transparent;
+    transform: translateY(-3px);
+
+}
+
+.title {
+    text-align: end;
+}
+
+.title h2 {
+    font-size: var(--h2-font);
+    line-height: 1.2;
+}
+
+.Hotels {
+    text-align: start;
+}
+
+.places-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+    grid-gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5rem;
+    text-align: center;
+}
+
+.thumbnail {
+    position: relative;
+    /* transition: all .3s cubic-bezier(cubic-bezier(0.445, 0.05, 0.55, 0.95)); */
+    transition: all 0.3s ease 0s;
+    will-change: filter;
+    cursor: pointer;
+
+}
+
+.thumbnail img {
+    width: 100%;
+    height: 315px;
+    border-radius: 1rem;
+    filter: brightness(80%);
+}
+
+.thumbnail h3 {
+    position: absolute;
+    font-size: 30px;
+    font-weight: 600;
+    text-align: right;
+    color: var(--bg-color);
+    top: 36px;
+    right: 40px;
+}
+
+/* nplaces-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 24px;
+    cursor: default;
+
+} */
+
+.location h4 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 8px;
+
+}
+
+.location p {
+    font-size: 15px;
+    color: var(--second-color);
+}
+
+.thumbnail:hover {
+    filter: brightness(100%);
+    transform: scale(1.04);
+}
+
+.stars i {
+    color: var(--main-color);
+    font-size: 20px;
+
+}
+
+.hotels-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(310px, auto));
+    grid-row: auto auto;
+    grid-gap: 6rem;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5rem;
+    text-align: left;
+
+}
+
+.col-content {
+    position: relative;
+    transition: all 0.3s ease 0s;
+    will-change: filter;
+    cursor: pointer;
+    width: 2fr
+}
+
+.col-content h3 {
+    position: absolute;
+    font-size: 30px;
+    font-weight: 600;
+    text-align: left;
+    color: var(--bg-color);
+    top: 36px;
+    left: 20px;
+}
+
+.col-content img {
+    width: 388px;
+    height: 315px;
+    border-radius: 1rem;
+    object-fit: cover;
+    filter: brightness(80%);
+
+}
+.col-content:hover {
+    filter: brightness(100%);
+    transform: scale(1.04);
+}
+
+.col-content h5 {
+    position: absolute;
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--bg-color);
+    left: 15px;
+    bottom: 60px;
+}
+
+#ContactUs {
+    background-color: rgb(4, 99, 122);
+    color: var(--text-color);
+}
+
+.main {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.footer {
+    padding: 20px 0;
+
+}
+
+.list {
+    width: 20%;
+
+
+}
+
+.list ul li a {
+    color: cadetblue;
+    display: block;
+    transition: 0.3s;
+}
+
+.list ul li a:hover {
+    color: var(--bg-color);
+    transform: translateX(15px);
+}
+
+.list h4 {
+    font-size: 21px;
+    color: var(--bg-color);
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.list h4::before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 60px;
+    left: 0;
+    bottom: -10px;
+    background: var(--bg-color);
+}
+
+.list ul:not(last-child) {
+    margin-bottom: 16px;
+}
+
+.Social {
+    cursor: pointer;
+}
+
+.Social a {
+    height: 45px;
+    width: 45px;
+    background: var(--bg-color);
+    color: var(--main-color);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 21px;
+    border-radius: 20px;
+    transition: ease 0.4s;
+    margin-right: 5px;
+}
+
+.Social a:hover {
+    box-shadow: 5px 10px 30px rgb(85 85 85 / 10%);
+    transform: scale(1.1);
+    border-radius: 25px;
+}
+
+.end-text {
+    text-align: center;
+    padding-top: 100px;
+    color: #ffffff63;
+}
+
+@media (max-width: 800px) {
+    header {
+        padding: 10px;
+    }
+    #menu-icon{
+        display: block;
+        color: var(--bg-color);
+    }
+    .white #menu-icon {
+        color:var(--text-color);
+    }
+    .white{
+        padding: 10px 22px;
+        color: var(--text-color);
+    }
+    .white  header {
+        color: var(--text-color);
+        position: fixed;
+        padding: 10px 22px;
+    }
+    .white .navbar a{
+        color: var(--bg-color);
+    }
+    .navbar {
+        position: absolute;
+        top: 0;
+        right: -100%;
+        width: 270px;
+        height: 120vh;
+        background: var(--main-color);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 15px 30px;
+        transition: 0.5s all;
+    }
+    .navbar a{
+        display: block;
+        margin: 1.2rem 0;
+    color: var(--bg-color);
+    }
+    .navbar a:hover{
+        color:var(--text-color)
+    }
+    
+    .open{
+        right: 0;
+    }
+    .col-content h3 {
+        position: absolute;
+        font-size: 30px;
+        font-weight: 600;
+        text-align: left;
+        color: var(--bg-color);
+        top: 36px;
+        right: 40px;
+    }
+
+    .hotels-content {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .home-text h1 {
+        font-size: 3rem;
+    }
+
+    .home-text p {
+        font-size: 1rem;
+        line-height: 24px;
+    }
+
+    .row-items {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .container-box {
+        padding: 20px;
+    }
+
+    .list {
+        width: 100%;
+    }
+
+    .list ul li a {
+        transform: none;
+    }
+
+    .list h4::before {
+        width: 40px;
+    }
+
+    .Social a {
+        height: 40px;
+        width: 40px;
+        font-size: 18px;
+        margin-right: 3px;
+    }
+
+    .end-text {
+        padding-top: 50px;
+    }
+}
+
+
